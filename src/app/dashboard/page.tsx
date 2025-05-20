@@ -28,6 +28,7 @@ export default function Dashboard() {
   const [status, setStatus] = useState("todo");
   const [tags, setTags] = useState("");
   const [editTask, setEditTask] = useState<Task | null>(null);
+  const [taskInEdit, setTaskInEdit] = useState<string | null>(null);
   const [sortOption, setSortOption] = useState("dueDate");
 
   useEffect(() => {
