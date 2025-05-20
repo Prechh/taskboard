@@ -1,22 +1,7 @@
 import { prisma } from "@/lib/prisma";
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const task = await prisma.task.findUnique({ where: { id: params.id } });
-
-  return {
-    title: task?.title || "Détail de la tâche",
-  };
-}
-
-export default async function TaskDetailsPage({ params }: Props) {
+export default async function TaskDetailsPage({ params }: any) {
   const task = await prisma.task.findUnique({
     where: { id: params.id },
   });
