@@ -288,12 +288,19 @@ export default function Dashboard() {
               onChange={(e) => setDescription(e.target.value)}
               className="bg-slate-900 text-white border-none p-2 w-full rounded"
             />
+            <label className="text-white font-medium block mt-2 mb-1">
+              Date d’échéance :
+            </label>
             <input
               type="date"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
               className="bg-slate-900 text-white border-none p-2 w-full rounded"
             />
+
+            <label className="text-white font-medium block mt-2 mb-1">
+              Priorité :
+            </label>
             <select
               value={priority}
               onChange={(e) => setPriority(e.target.value)}
@@ -303,6 +310,10 @@ export default function Dashboard() {
               <option value="moyenne">Moyenne</option>
               <option value="haute">Haute</option>
             </select>
+
+            <label className="text-white font-medium block mt-2 mb-1">
+              Statut :
+            </label>
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value)}
