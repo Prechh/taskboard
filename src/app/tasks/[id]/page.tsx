@@ -1,11 +1,11 @@
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 
-type PageProps = {
+export default async function TaskDetailsPage({
+  params,
+}: {
   params: { id: string };
-};
-
-export default async function TaskDetailsPage({ params }: PageProps) {
+}) {
   const task = await prisma.task.findUnique({
     where: { id: params.id },
   });
