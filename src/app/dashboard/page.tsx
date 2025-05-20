@@ -289,7 +289,7 @@ export default function Dashboard() {
               className="bg-slate-900 text-white border-none p-2 w-full rounded"
             />
             <label className="text-white font-medium block mt-2 mb-1">
-              Date d’échéance :
+              Date d’échéance:
             </label>
             <input
               type="date"
